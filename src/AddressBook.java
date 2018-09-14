@@ -23,7 +23,10 @@ public class AddressBook {
 	
 	public static void main(String args) {
 		
-		System.out.println("Address Book");
+		Buddyinfo buddy = new Buddyinfo("Tom", "Carleton","613");
+		AddressBook addressBook = new AddressBook();
+		addressBook.addBuddy(buddy);
+		addressBook.removeBuddy(0);
 	}
 	
 	
