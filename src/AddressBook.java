@@ -1,32 +1,42 @@
-
+/*
+ * Lab 2
+ * Author: Amandeep Singh
+ * SYSC 3110 L2
+ * 101039656
+ */
 import java.util.*;
 
 public class AddressBook {
 	
-	private ArrayList <Buddyinfo>buddyInfo = new ArrayList<Buddyinfo>(); 
+	private ArrayList <BuddyInfo> buddyInfo = new ArrayList<BuddyInfo>(); //Arraylist that stores the buddy fields
 	
-	
-	public void addBuddy(Buddyinfo aBuddyInfo) {
-		
-		if(aBuddyInfo != null) {
-			buddyInfo.add(aBuddyInfo);
+	/*
+	 * Add method to add the buddy fields
+	 * Passing in a Buddyinfo object as parameter
+	 */
+	public void addBuddy(BuddyInfo aBuddyInfo) { 
+		if(aBuddyInfo != null) { //if the object is not null add the add it in the arraylist
+			buddyInfo.add(aBuddyInfo);//add the buddy fields
 		}
 	}
 	
+	/*
+	 * Remove method to remove the buddy fields
+	 * takes in the index as parameter
+	 */
 	
-	public void removeBuddy(int index) {
-			
-			if(index >=0 && index < buddyInfo.size()) {
-				buddyInfo.remove(index);
+	public void removeBuddy(int index) { 
+			if(index >=0 && index < buddyInfo.size()) { //if the object is in the Arraylist then remove it
+				buddyInfo.remove(index);//remove the particular index
 			}
 	}
 	
-	public static void main(String args) {
+	public static void main(String args) { //Main method
 		
-		Buddyinfo buddy = new Buddyinfo("Tom", "Carleton","613");
-		AddressBook addressBook = new AddressBook();
-		addressBook.addBuddy(buddy);
-		addressBook.removeBuddy(0);
+		BuddyInfo buddy = new BuddyInfo("Tom", "Carleton","613");//create a new buddy object
+		AddressBook addressBook = new AddressBook();// creates a new addressBook object
+		addressBook.addBuddy(buddy);// testing the add function
+		addressBook.removeBuddy(0);//testing the remove function
 	}
 	
 	
